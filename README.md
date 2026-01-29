@@ -1,25 +1,25 @@
 # LLM.DOC
 
-结构化LLM学习笔记仓库。
-
-## 项目结构
-
-```
-llm.doc/
-├── README.md
-├── llama.cpp/
-│   └── prefix-cache/
-│       ├── README.md         # 完整指南
-│       ├── diagrams.md       # Mermaid图解
-│       ├── index.md          # 文档索引
-│       └── quick-reference.md # 快速参考
-└── ...
-```
+结构化LLM学习笔记仓库，按知识点组织。
 
 ## 知识点
 
-### LLM框架
-- [llama.cpp/prefix-cache](llama.cpp/prefix-cache/) - KV Cache复用机制
+### KV Cache复用
+
+| 框架 | 主题 | 内容 |
+|------|------|------|
+| [llama.cpp](llama.cpp/prefix-cache/) | Prefix Cache | 两层缓存架构、Slot-level/Global Cache |
+| [vLLM](vllm/prefix-cache/) | Zero-Overhead Prefix Cache | 零开销实现、结构/操作/代码优化 |
+
+## 框架
+
+### llama.cpp
+
+- [prefix-cache](llama.cpp/prefix-cache/) - KV Cache复用机制
+
+### vLLM
+
+- [prefix-cache](vllm/prefix-cache/) - 零开销前置缓存
 
 ## 使用
 
