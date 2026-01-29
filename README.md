@@ -4,12 +4,14 @@
 
 ## 知识点
 
-### KV Cache复用
+### Prefix Cache
 
-| 框架 | 主题 | 内容 |
-|------|------|------|
-| [llama.cpp](llama.cpp/prefix-cache/) | Prefix Cache | 两层缓存架构、Slot-level/Global Cache |
-| [vLLM](vllm/prefix-cache/) | Zero-Overhead Prefix Cache | 零开销实现、结构/操作/代码优化 |
+KV Cache跨请求复用机制，减少prefill阶段计算量。
+
+| 框架 | 实现 |
+|------|------|
+| [llama.cpp](llama.cpp/prefix-cache/) | 两层缓存架构：Slot-level Cache Reuse + Global Prompt Cache |
+| [vLLM](vllm/prefix-cache/) | 零开销Prefix Cache：结构/操作/代码优化 |
 
 ## 框架
 
